@@ -1,0 +1,39 @@
+package com.generation.helloworld.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/hello-world")
+public class HelloWorld {
+ @GetMapping
+ public String helloWorld() {
+	 return "Hello World!";
+ }
+ 
+ @GetMapping("/2")
+ public String bms() {
+     return """
+         1- Mentalidade de Crescimento/n
+         2- Orientação ao Futuro/n
+         3- Responsabilidade Pessoal/n
+         4- Persistência/n
+         5- Trabalho em Equipe/n
+         6- Comunicação/n
+         7- Proatividade/n
+         8- Orientação ao Detalhe/n""";
+ }
+ 
+ 
+ @GetMapping("3")
+ public String Objetivos() {
+	 return """
+	 		1- Por minhas tarefas em dia
+	 		2- Entender ao fundo POO 
+	 		""";
+ }
+}
